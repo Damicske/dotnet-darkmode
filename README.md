@@ -28,6 +28,19 @@ Private Sub Application_Startup(sender As Object, e As StartupEventArgs) Handles
 End Sub
 ```
 
+If the ApplicationEvetns are empty
+```vb
+Imports Microsoft.VisualBasic.ApplicationServices
+
+Namespace My
+    Partial Friend Class MyApplication
+        Public Sub Application_Startup(sender As Object, e As StartupEventArgs) Handles MyBase.Startup
+            DarkMode.SetAppTheme(DarkMode.Theme.SYSTEM)
+        End Sub
+    End Class
+End Namespace
+```
+
 ### Step 2: Enabling dark mode for each window
 
 1. Open the class for one of your Forms.
